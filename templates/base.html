@@ -32,7 +32,23 @@
     <title>Craft Junction {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed top"></header>
+    <header class="container-fluid fixed top">
+      <div class="row">
+        <div class="col-12 col-lg-4 display-4 text-left">
+          <a href="{% url 'home' %}" class="nav-link"><h1><b>Craft Junction</b></h1></a>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <form method="GET" action="">
+            <div class="form-group">
+              <input class="form-control form-control-sm" type="text" placeholder="search our site">
+              <button type="search" class="btn btn-primary">Search</button>
+        </div>
+        
+        <div class="col-12 col-lg-4"></div>
+      </div>
+
+    </header>
 
     {% if messages %}
         <div class="message-container"></div>
