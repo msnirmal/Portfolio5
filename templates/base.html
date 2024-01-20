@@ -33,7 +33,7 @@
   </head>
   <body>
     <header class="container-fluid fixed top">
-      <div class="row">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link"><h1><b>Craft Junction</b></h1></a>
         </div>
@@ -44,16 +44,15 @@
               <input type="text" class="form-control" name= 'q' placeholder="Search this site">
               <div class="input-group-append">
                 <button class=" form-control btn btn-secondary" type="submit">
-                  <span>Search</span>
-                </button>
+                  <span>s</span></button>
               </div>
             </div>
           </form>
         </div>
         
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
-            <ul class="list-inline list-umstyled text-center text-lg-right my-0">
-              <li class="list-inline-item dropdown"></li>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+              <li class="list-inline-item dropdown">
               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-user fa-lg"></i></div>
@@ -88,10 +87,10 @@
             </a>
         </li>
     </ul>
-</div>
+  </div>
 </div>
 
-    </header>
+</header>
 
     {% if messages %}
         <div class="message-container"></div>
