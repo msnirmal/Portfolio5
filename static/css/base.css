@@ -7,10 +7,15 @@ h2 {
 }
 
 h1{
-    color: bisque;
+    color: whitesmoke
 }
 
-.main_nav{
-    background-color: black;
-    color: whitesmoke;
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
