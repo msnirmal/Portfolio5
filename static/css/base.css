@@ -2,12 +2,8 @@ body{
     background: url('/media/Hero_image.jpg') no-repeat center center fixed;
 }
 
-h2 {
-    color: whitesmoke;
-}
-
 h1{
-    color: whitesmoke
+	color: whitesmoke
 }
 
 .overlay {
