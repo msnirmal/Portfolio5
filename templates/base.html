@@ -36,7 +36,7 @@
   <body>
     <div class="row d-flex align-items-center">
       <div class="col-md-12 shipping-purchase text-center bg-dark text-white">
-        <p>Free shipping on a purchase value of $25</p>
+        <p>Free shipping on a purchase value of £25</p>
       </div>
     <header class="container-fluid fixed top">
       <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex text-white">
@@ -45,9 +45,9 @@
         </div>
 
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <form method="GET" action="">
+          <form method="GET" action="{% url 'products' %}">
             <div class="input-group">
-              <input type="text" class="form-control" name= 'q' placeholder="Search this site">
+              <input type="text" class="form-control" name= 'search' placeholder="Search Products">
               <div class="input-group-append">
                 <button class=" form-control btn btn-secondary" type="submit">
                   <span><i class="fa-solid fa-magnifying-glass"></i></span></button>
