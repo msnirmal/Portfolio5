@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6t3he=x*1-m0#38s^2bmi@2u+qh7fp8oyexj(7@t3@f7@jq^*#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-msnirmal-portfolio5-4jrafj6u3ei.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-msnirmal-portfolio5-4jrafj6u3ei.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
+    'cart',
 ]
 
 MIDDLEWARE = [
