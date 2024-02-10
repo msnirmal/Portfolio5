@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def view_cart(request):
+def cart_page(request):
     
-    """ A view to return the view the cart """
+    """ A view to render the cart page """
 
     return render(request, 'cart/cart.html')
