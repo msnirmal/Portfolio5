@@ -33,10 +33,7 @@
      <title>Craft Junction {% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-      <div class="row d-flex align-items-center">
-        <div class="col-md-12 shipping-purchase text-center bg-dark text-white">
-        <p>Free delivery on purchase value of £{{ free_delivery_threshold }}</p>
-      </div>
+      
     <header class="container-fluid fixed top">
       <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex text-white">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -102,6 +99,11 @@
               {% include 'includes/main-nav.html' %}
           </nav>
       </div>
+      <div class="row d-flex align-items-center">
+        <div class="col-md-12 shipping-purchase text-center bg-dark text-white">
+        <p>Free delivery on purchase value of £{{ free_delivery_threshold }}</p>
+      </div>
+    </div>
 </header>
 
     {% if messages %}
