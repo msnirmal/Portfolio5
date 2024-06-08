@@ -15,3 +15,7 @@ h1{
 	background: white;
 	z-index: -1;
 }
+
+.font{
+	text-decoration: dashed;
+}
