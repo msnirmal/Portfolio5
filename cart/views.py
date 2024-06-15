@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 
-def cart_page(request):
+def view_cart(request):
     
     """ A view to render the cart page """
 
@@ -21,5 +21,4 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
