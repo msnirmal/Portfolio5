@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import Order, OrderLineItem
+from products.models import Product
 from cart.contexts import cart_summary
 
 import stripe
@@ -33,7 +35,7 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-
+                    
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -50,7 +52,6 @@ def checkout(request):
                 Please double check your information.')
 
     else:
-
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "There's nothing in your cart")
@@ -66,7 +67,7 @@ def checkout(request):
         )
 
     
-    order_form = OrderForm()
+        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -77,6 +78,26 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': 'stripe_public_key',
         'client_secret': intent.client_secret ,
+    }
+
+    return render(request, template, context)
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
