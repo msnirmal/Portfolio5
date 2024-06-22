@@ -1,0 +1,1 @@
+web: gunicorn craft_junction.wsgi:application
