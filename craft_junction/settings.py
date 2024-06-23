@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-6t3he=x*1-m0#38s^2bmi@2u+qh7fp8oyexj(7@t3@f7@jq^*#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['craft-junction-58f9e201f261.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['craft-junction-58f9e201f261.herokuapp.com', '8000-msnirmal-portfolio5-hmrku33ja2r.ws-eu114.gitpod.io']
 
 
 # Application definition

@@ -7,7 +7,7 @@ from django.conf import settings
 from products.models import Product
 from profiles.models import UserProfile
 
-# Create your models here.
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
